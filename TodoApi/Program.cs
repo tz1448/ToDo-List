@@ -25,11 +25,11 @@ builder.Services.AddCors();
 var app = builder.Build();
 app.UseCors();
 
-if (app.Environment.IsDevelopment())
-{
+//if (app.Environment.IsDevelopment())
+//{
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+//}
 
  //get all tasks
  app.MapGet("/", async (ToDoDbContext db) =>
